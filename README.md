@@ -161,6 +161,9 @@ Nas próximas aulas veremos também outra forma de criar objetos ao utilizar fun
 
 ## 3 Percorrendo Objetos
 
+### FOR...IN
+
+
 
 
 

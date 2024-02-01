@@ -168,7 +168,42 @@ Nas próximas aulas veremos também outra forma de criar objetos ao utilizar fun
 ### FOR...IN
 o método for … In que permite a iteração sobre as propriedades de um objeto como em um array. 
 
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/687561dd-c94e-46ad-8cf1-397b5ab32bac)
+traz as chaves, nomes de nossas propriedades.
+
+se utilizar:
+```
+console.log(cliente[chave])
+```
+acessa os valores de cada chave.
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/58ec18e8-8c66-4e22-b10a-c65a2b4dbb6c)
+
+se utilizar:
+```
+console.log(`A chave ${chave} tem o valor ${cliente[chave]}`)
+```
+ele trás cada chave e o valor de cada uma.
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/9e4a8aa3-ae4e-4641-9d26-ea3c36b38149)
+
+Para solucionar o erro que aparece na chave enderecos:
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/6261da20-2b71-4141-b404-58ed6b99e7b8)
+
+trazendo apenas o que é objeto.
+
+
 ### METODOS DE OBJETO
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/481bbbc5-4b70-4b0f-acd0-338d07d90940)
+
+Aparecem as chaves:
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/4c9d1c59-4dd0-40a6-ba76-b0f418e34ea9)
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/bbb23827-83e7-4924-91eb-2004c518ff4a)
+
 
 ### Para saber mais: outros métodos de objetos
 
@@ -179,6 +214,15 @@ Acesse a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/Ja
 Sabemos que o ecossistema JavaScript é bem vasto e sofre diversas mudanças em função do tempo, então vale a pena dedicarmos um tempo para olhar a documentação e dar uma lida com calma.
 
 ### SINTAXE DE ESPALHAMENTO
+
+serve para compor ou descompor arrays.
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/25d8eae0-bb98-4de2-8245-5a983c385d8b)
+
+ou, utilizando a sintaxe de espalhamento:
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/d1bccf3c-8352-4b74-a18b-6843ad0f1a4d)
+
 
 ### Para saber mais: spread operator
 

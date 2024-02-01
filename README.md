@@ -11,6 +11,10 @@ Que para adicionar e manipular dados em um objeto precisamos saber como acessar 
 Que para manipular objetos literais podemos utilizar os métodos do JavaScript para cada tipo de dado;
 Que os valores em um objeto podem ser tipos primitivos (strings, números, booleanos e null), arrays ou outros objetos;
 Que além das propriedades, também podemos atribuir funções que dão comportamento a um objeto.
+Como percorrer objetos a partir das chaves com for...in, iterando sobre as propriedades de um objeto como em um array;
+Que para extrair chaves e valores de objetos é possível utilizar métodos de Object;
+Que funções como .entries, .key e .value podem ser úteis na hora de trabalhar com objetos;
+Que o spread operator (ou sintaxe de espalhamento) pode ser uma opção para decompor objetos quando precisamos extraí-los de um array e formar um novo array.
 
 
 O que vamos aprender?
@@ -162,6 +166,94 @@ Nas próximas aulas veremos também outra forma de criar objetos ao utilizar fun
 ## 3 Percorrendo Objetos
 
 ### FOR...IN
+o método for … In que permite a iteração sobre as propriedades de um objeto como em um array. 
+
+### METODOS DE OBJETO
+
+### Para saber mais: outros métodos de objetos
+
+Para aprofundar seus conhecimentos, que tal conhecer o funcionamento dos objetos em JavaScript?
+
+Acesse a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects), que é uma ótima referência aos nossos estudos e amplie os conhecimentos dos métodos e práticas que realizamos até agora.
+
+Sabemos que o ecossistema JavaScript é bem vasto e sofre diversas mudanças em função do tempo, então vale a pena dedicarmos um tempo para olhar a documentação e dar uma lida com calma.
+
+### SINTAXE DE ESPALHAMENTO
+
+### Para saber mais: spread operator
+
+
+No vídeo anterior vimos um exemplo de uso do spread operator, também conhecido como sintaxe de espalhamento ou operador de espalhamento. Este operador copia as propriedades de objetos para outros, “espalhando” os conteúdos. Para entender melhor, vamos ver mais alguns exemplos:
+
+const fichaGuerreiro = {
+ nome: "Aragorn",
+ classe: "guerreiro"
+}
+
+const equipoGuerreiro = {
+ espada: "Andúril",
+ capa: "capa élfica +2"
+}COPIAR CÓDIGO
+Ainda usando o exemplo acima, agora vamos tentar juntar esses dois objetos em apenas um, que vamos chamar de personagens. Em um primeiro teste, vamos criar um novo objeto literal com { } e passar para este objeto as variáveis de cada personagem:
+
+const guerreiro = { fichaGuerreiro, equipoGuerreiro }
+console.log(guerreiro)COPIAR CÓDIGO
+O resultado no console não é exatamente o que queremos, pois os objetos ainda estão separados. Porém, agora o nome de cada variável é uma chave e o valor da chave é cada um dos objetos:
+
+{
+  fichaGuerreiro: { nome: 'Aragorn', classe: 'guerreiro' },
+  equipoGuerreiro: { espada: 'Andúril', capa: 'capa élfica +2' }
+}COPIAR CÓDIGO
+Aqui é onde vamos utilizar o spread operator, adicionando a sintaxe de três pontos (reticências) antes do nome de cada objeto literal, separando-os com uma vírgula:
+
+const guerreiro = { ...fichaGuerreiro, ...equipoGuerreiro }
+console.log(guerreiro)COPIAR CÓDIGO
+Após usar o spread operator, o console vai mostrar o resultado esperado, que é:
+
+{
+ nome: 'Aragorn',
+ classe: 'guerreiro',
+ espada: 'Andúril',
+ capa: 'capa élfica +2'
+}COPIAR CÓDIGO
+Importante! Vale notar que, caso a sintaxe de espalhamento seja usada em objetos que tenham chaves/propriedades com o mesmo nome, o JavaScript vai sobrescrever o valor destas propriedades à medida que encontra novos valores com o mesmo nome de chave. Por exemplo:
+
+const mago = {
+ nome: "Gandalf",
+ classe: "mago"
+}
+ const guerreiro = {
+ nome: "Aragorn",
+ classe: "guerreiro"
+}
+
+const ranger = {
+ nome: "Legolas",
+ classe: "ranger"
+}COPIAR CÓDIGO
+Os três objetos acima têm as mesmas propriedades. Mas o que acontece se tentarmos “espalhar” os dados em um único objeto com o spread operator? Vamos ver:
+
+const personagens = { ...mago, ...guerreiro, ...ranger }
+console.log(personagens)COPIAR CÓDIGO
+Fazendo isso o resultado não será bem o que esperamos:
+
+{ nome: 'Legolas', classe: 'ranger' }COPIAR CÓDIGO
+Perceba que o JavaScript sobrescreve as chaves com o mesmo nome a cada ocorrência, fazendo com que o resultado final seja somente o último objeto declarado dentro do objeto personagens.
+
+Apesar de prático, o uso da sintaxe de espalhamento pode gerar bastante processamento, então deve ser usado com cuidado em caso de loops ou funções recursivas.
+
+Caso queira, temos outra explicação deste processo aqui no [artigo ES6 - Desestruturando objetos](https://www.alura.com.br/artigos/es6-desestruturando-objetos?_gl=1*1uvdg9y*_ga*OTg3OTYxNjIuMTcwMDYwOTY1Nw..*_ga_1EPWSW3PCS*MTcwNjgxMjY1My42LjEuMTcwNjgxNDM3NS4wLjAuMA..*_fplc*VDhhemV2YjdHQ0RMTjV5SmdCRDdhdkl2bWJ6QkptREN2VFolMkZNTEdmT1BrSGxpZUpLMzV6MW9EdFdsVmsya0NrTEFCS29xZWtrSG81bTd2bkxSTWJrZG9BRHYwZk9yQ3pwUEY0N0FIQ3JnYTNWak52dEF5Nk1BeGNuSmRJc2clM0QlM0Q.) presente na nossa plataforma.
+
+Você sabia que também é possível utilizar esta sintaxe com arrays? Confira mais exemplos disso neste [Alura+](https://youtu.be/f8a-qwKC5yk).
+
+
+## 4. CONHECENDO O JSON
+
+
+
+
+
+
 
 
 

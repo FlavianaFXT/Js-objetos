@@ -6,4 +6,3 @@ const  cliente = {
 }
 
 console.log(cliente);
-console.log(cliente.telefone);

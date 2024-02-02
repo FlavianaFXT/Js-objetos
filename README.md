@@ -293,6 +293,26 @@ Você sabia que também é possível utilizar esta sintaxe com arrays? Confira m
 
 ## 4. CONHECENDO O JSON
 
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/46e7c7e5-e04a-4f86-b45d-4a8325e32f13)
+
+## 5. EXERCITANDO OS CONHECIMENTOS
+
+### Encontrando um Objeto
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/0187b4a3-46e7-4424-91fc-fed27606a353)
+
+### Filtrando Objetos
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/12f59be9-d618-49c8-a97c-3c9fd2e5b3fd)
+
+
+### Ordenando Objetos
+
+Como ordenar nossa lista de clientes em ordem alfabética:
+
+![image](https://github.com/FlavianaFXT/Js-objetos/assets/113718720/1c6c59cd-d6f9-4146-bf2a-8d827dbbc29e)
+
+
 
 
 
